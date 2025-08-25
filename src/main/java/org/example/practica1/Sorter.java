@@ -1,9 +1,6 @@
 package org.example.practica1;
 
-import org.example.practica1.Sorters.BubbleSort;
-import org.example.practica1.Sorters.InsertSort;
-import org.example.practica1.Sorters.MergeSort;
-import org.example.practica1.Sorters.QuickSort;
+import org.example.practica1.Sorters.*;
 
 public class Sorter {
     public void sort () {
@@ -15,6 +12,7 @@ public class Sorter {
         BubbleSort bubbleSort = new BubbleSort(persona);
         QuickSort quickSort = new QuickSort(persona);
         MergeSort mergeSort = new MergeSort(persona);
+        BinarySearch binarySearch = new BinarySearch(persona);
 
         System.out.println("Datos sin Ordenar:");
         imprimir(persona);
@@ -34,6 +32,12 @@ public class Sorter {
         System.out.println("\nOrdenando IMC por MergeSort:");
         mergeSort.mergeSort(0, persona.length - 1);
         imprimir(persona);
+
+        System.out.println("\nBusqueda binaria por edad: ");
+        bubbleSort.bubbleSort();
+        imprimir(persona);
+        System.out.println(binarySearch);
+
     }
 
     public void imprimir (Persona A[]) {
